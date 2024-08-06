@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfoehjyg7drwq"]
+
+[ext_resource type="Texture2D" uid="uid://co16r88nbepf" path="res://grid_pink_bg.webp" id="1_fbkse"]
+[ext_resource type="PackedScene" uid="uid://jnjgmvtwbyia" path="res://character_body_2d.tscn" id="2_u5jqb"]
+[ext_resource type="PackedScene" uid="uid://b0j6gj30bdf0j" path="res://opp.tscn" id="4_i2cc4"]
+
+[node name="World" type="Node2D"]
+
+[node name="opp3" parent="." instance=ExtResource("4_i2cc4")]
+position = Vector2(-56, -968)
+
+[node name="opp2" parent="." instance=ExtResource("4_i2cc4")]
+position = Vector2(-696, 360)
+
+[node name="opp" parent="." instance=ExtResource("4_i2cc4")]
+position = Vector2(944, 312)
+
+[node name="unrelated_to_tutorial" type="ParallaxBackground" parent="."]
+
+[node name="background" type="ParallaxLayer" parent="unrelated_to_tutorial"]
+motion_mirroring = Vector2(2560, 1440)
+
+[node name="background_image" type="Sprite2D" parent="unrelated_to_tutorial/background"]
+texture = ExtResource("1_fbkse")
+centered = false
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_u5jqb")]
+position = Vector2(32, -24)
